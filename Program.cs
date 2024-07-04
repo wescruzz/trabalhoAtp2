@@ -6,7 +6,6 @@ class Program
     static string arqDatEleicao = "eleicao in.txt";
     static string arqOutEleicao = "eleicao out.txt";
 
-    // Verifica se existe o arquivo eleicao in.
     static bool veriExistArq()
     {
         if (File.Exists(arqDatEleicao))
@@ -20,7 +19,6 @@ class Program
         }
     }
 
-    // Exibi o resultado da eleicao em tela e adiciona no eleicao out. 
     static void exibirResultado(int[] votos, int candidato1, int candidato2, StreamWriter sw)
     {
         int votosCandidato1 = 0, votosCandidato2 = 0, votosBrancos = 0, votosNulos = 0;
@@ -46,21 +44,21 @@ class Program
             }
         }
 
-        string resultado = $"Candidato {candidato1}: {votosCandidato1} votos\n" +
-                           $"Candidato {candidato2}: {votosCandidato2} votos\n" +
-                           $"Votos em branco: {votosBrancos}\n" +
-                           $"Votos nulos: {votosNulos}\n";
+        string resultado = "Candidato " + candidato1 + ": " + votosCandidato1 + " votos\n" +
+                           "Candidato " + candidato2 + ": " + votosCandidato2 + " votos\n" +
+                           "Votos em branco: " + votosBrancos + "\n" +
+                           "Votos nulos: " + votosNulos + "\n";
 
         Console.WriteLine(resultado);
         sw.WriteLine(resultado);
-        // Adiciona a lógica para conferir qual candidato venceu.
+
         if (votosCandidato1 > votosCandidato2)
         {
-            resultado = $"Candidato {candidato1} venceu a eleição!\n";
+            resultado = "Candidato " + candidato1 + " venceu a eleição!\n";
         }
         else if (votosCandidato2 > votosCandidato1)
         {
-            resultado = $"Candidato {candidato2} venceu a eleição!\n";
+            resultado = "Candidato " + candidato2 + " venceu a eleição!\n";
         }
         else
         {
@@ -75,7 +73,7 @@ class Program
     {
         using (StreamReader sr = new StreamReader(arqDatEleicao))
         {
-            // Pular as linhas até encontrar o número de eleitores válido.
+            // Pular as linhas até encontrar o número de eleitores válido
             string linha;
             while ((linha = sr.ReadLine()) != null)
             {
@@ -86,17 +84,17 @@ class Program
                 }
             }
 
-            // Pular as linhas dos dados dos eleitores e candidatos.
+            // Pular as linhas dos dados dos eleitores e candidatos
             for (int j = 0; j < quantE * 4 + 2; j++)
             {
                 sr.ReadLine();
             }
 
-            // Ler os votos dos eleitores.
+            // Ler os votos dos eleitores
             for (int k = 0; k < quantE; k++)
             {
                 votos[k] = Convert.ToInt32(sr.ReadLine());
-                situacao[k] = true;
+                situacao[k] = true; // Marca que o eleitor votou
             }
         }
     }
@@ -132,7 +130,7 @@ class Program
     {
         using (StreamReader sr = new StreamReader(arqDatEleicao))
         {
-            // Pular as linhas até encontrar o número de eleitores válido.
+            // Pular as linhas até encontrar o número de eleitores válido
             string linha;
             while ((linha = sr.ReadLine()) != null)
             {
@@ -143,7 +141,7 @@ class Program
                 }
             }
 
-            // Ler os dados dos eleitores.
+            // Ler os dados dos eleitores
             for (int ind = 0; ind < quantE; ind++)
             {
                 tE[ind] = Convert.ToInt32(sr.ReadLine());
@@ -154,7 +152,6 @@ class Program
         }
     }
 
-    // Verifica a quantidade de eleitores,
     static void quantEleitores(ref int quantE, ref int pos)
     {
         int linhaConvert;
@@ -169,7 +166,7 @@ class Program
                     quantE = linhaConvert;
                     break;
                 }
-                Console.WriteLine($"Valor encontrado {linhaConvert}, é preciso ter pelo menos 10 eleitores!!!");
+                Console.WriteLine("Valor encontrado " + linhaConvert + ", é preciso ter pelo menos 10 eleitores!!!");
             }
         }
     }
@@ -182,14 +179,14 @@ class Program
             Console.WriteLine("Erro ao ler o arquivo!!!");
             return;
         }
-        // Inicia a escrita em out.
+
         using (StreamWriter sw = new StreamWriter(arqOutEleicao))
         {
             int quantE = 0;
             int posicaoLinha = 0;
             quantEleitores(ref quantE, ref posicaoLinha);
-            sw.WriteLine($"A quantidade de eleitores é {quantE}.");
-            Console.WriteLine($"A quantidade de eleitores é {quantE}.");
+            sw.WriteLine("A quantidade de eleitores é " + quantE + ".");
+            Console.WriteLine("A quantidade de eleitores é " + quantE + ".");
 
             int[] titulo = new int[quantE];
             string[] nome = new string[quantE];
@@ -216,10 +213,10 @@ class Program
             int astrogildoNum = 0;
 
             lerNumCandidatos(ref teobaldoNum, ref astrogildoNum, quantE);
-            sw.WriteLine($"Teobaldo número de candidato = {teobaldoNum}.");
-            sw.WriteLine($"Astrogildo número de candidato = {astrogildoNum}.");
-            Console.WriteLine($"Teobaldo número de candidato = {teobaldoNum}.");
-            Console.WriteLine($"Astrogildo número de candidato = {astrogildoNum}.");
+            sw.WriteLine("Teobaldo número de candidato = " + teobaldoNum + ".");
+            sw.WriteLine("Astrogildo número de candidato = " + astrogildoNum + ".");
+            Console.WriteLine("Teobaldo número de candidato = " + teobaldoNum + ".");
+            Console.WriteLine("Astrogildo número de candidato = " + astrogildoNum + ".");
 
             int[] votos = new int[quantE];
             lerVotos(quantE, teobaldoNum, astrogildoNum, ref votos, ref situacaoVoto);
@@ -230,7 +227,7 @@ class Program
             Console.WriteLine("Situação dos eleitores:");
             for (int i = 0; i < situacaoVoto.Length; i++)
             {
-                string situacao = $"Eleitor {titulo[i]} - Votou: {(situacaoVoto[i] ? "Sim" : "Não")}";
+                string situacao = "Eleitor " + titulo[i] + " - Votou: " + (situacaoVoto[i] ? "Sim" : "Não");
                 sw.WriteLine(situacao);
                 Console.WriteLine(situacao);
             }

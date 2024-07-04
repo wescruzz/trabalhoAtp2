@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eleicaoFimT2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06ae9d652822b27ec18ef7d17f6fee2cba342875")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f1fd01e137d0832f0f0cf71bdc0bba4fc1c3996")]
 [assembly: System.Reflection.AssemblyProductAttribute("eleicaoFimT2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eleicaoFimT2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

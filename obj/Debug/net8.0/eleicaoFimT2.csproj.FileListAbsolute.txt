@@ -27,3 +27,4 @@ C:\Users\wess\OneDrive\Área de Trabalho\eleicaoFimT2\trabalhoAtp2\obj\Debug\net
 C:\Users\wess\OneDrive\Área de Trabalho\eleicaoFimT2\trabalhoAtp2\obj\Debug\net8.0\eleicaoFimT2.pdb
 C:\Users\wess\OneDrive\Área de Trabalho\eleicaoFimT2\trabalhoAtp2\obj\Debug\net8.0\eleicaoFimT2.genruntimeconfig.cache
 C:\Users\wess\OneDrive\Área de Trabalho\eleicaoFimT2\trabalhoAtp2\obj\Debug\net8.0\ref\eleicaoFimT2.dll
+C:\Users\wess\OneDrive\Área de Trabalho\eleicaoFimT2\trabalhoAtp2\obj\Debug\net8.0\eleicaoFimT2.sourcelink.json
