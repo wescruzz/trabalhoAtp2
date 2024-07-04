@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "eleicaoFimT2/1.0.0": {
+        "runtime": {
+          "eleicaoFimT2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "eleicaoFimT2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

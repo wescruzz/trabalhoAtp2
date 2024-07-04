@@ -1,0 +1,61 @@
+A quantidade de eleitores é 10.
+1001
+Eleitor1
+01/01/1980
+40
+1002
+eleitor2
+02/02/1981
+39
+1003
+Eleitor3
+03/03/1982
+38
+1004
+Eleitor4
+04/04/1983
+37
+1005
+Eleitor5
+05/05/1984
+36
+1006
+eleitor6
+06/06/1985
+35
+1007
+eleitor7
+07/07/1986
+34
+1008
+Eleitor8
+08/08/1987
+33
+1009
+Eleitor9
+09/09/1988
+32
+1010
+Eleitor10
+10/10/1989
+31
+Teobaldo número de candidato = 11.
+Astrogildo número de candidato = 12.
+Candidato 11: 5 votos
+Candidato 12: 3 votos
+Votos em branco: 1
+Votos nulos: 1
+
+Candidato 11 venceu a eleição!
+
+Situação dos eleitores:
+Eleitor 1001 - Votou: Sim
+Eleitor 1002 - Votou: Sim
+Eleitor 1003 - Votou: Sim
+Eleitor 1004 - Votou: Sim
+Eleitor 1005 - Votou: Sim
+Eleitor 1006 - Votou: Sim
+Eleitor 1007 - Votou: Sim
+Eleitor 1008 - Votou: Sim
+Eleitor 1009 - Votou: Sim
+Eleitor 1010 - Votou: Sim
